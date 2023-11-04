@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Cheat App Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--HW 1: contacts list: ol vs ul?
+    Daca vorbim de lista de contacte din viber atunci 
+    ar fi bine sa folosim lista ordonata (ol), pu ca lista de contacte se 
+    aranjeaza in ordinea alfabetica. Iar daca vorbim de lista de contacte 
+    din cheat atunci folosim lista neordonata (ul), pu ca aici are prioritate 
+    ultimul contact cu care sa vorbit sau ultimul care a trimis mesaj-->
+    <!--<div class="phone">-->
+    <!--<div class="status"></div>-->
+    <section class="app">
+      <header></header>
+      <main>
+        <ul class="contacts">
+          <li class="contacts__profile status--offline">
+            <div class="profile__slide">
+              <div class="profile__avatar">
+                <img src="avatars/1.png" alt="Martin Kuerbs" />
+              </div>
+              <div class="message__content">
+                <h2>Martin Kuerbs</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+
+              <div class="seen--status">
+                <span class="message__status">09:31</span>
+              </div>
+            </div>
+            <div class="profile__actions">
+              <button>+</button>
+              <button>-</button>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online">
+            <div class="profile__avatar">
+              <img src="avatars/2.png" alt="John Doe" />
+            </div>
+            <div class="message__content">
+              <h2>John Doe</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="send--status">
+              <span class="message__status">11:03</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online5min">
+            <div class="profile__avatar">
+              <img src="avatars/3.png" alt="Anna Smith" />
+            </div>
+            <div class="message__content">
+              <h2>Anna Smith</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="seen--status">
+              <span class="message__status">23:43</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/1.png" alt="Martin Kuerbs" />
+            </div>
+            <div class="message__content">
+              <h2>Martin Kuerbs</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="reached--status">
+              <span class="message__status">02:12</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online5min">
+            <div class="profile__avatar">
+              <img src="avatars/2.png" alt="John Doe" />
+            </div>
+            <div class="message__content">
+              <h2>John Doe</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="phoned--status">
+              <span class="message__status"> 10:11</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/3.png" alt="Anna Smith" />
+            </div>
+            <div class="message__content">
+              <h2>Anna Smith</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="seen--status">
+              <span class="message__status">07:47</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/1.png" alt="Martin Kuerbs" />
+            </div>
+            <div class="message__content">
+              <h2>Martin Kuerbs</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="reached--status">
+              <span class="message__status">16:59</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online">
+            <div class="profile__avatar">
+              <img src="avatars/2.png" alt="John Doe" />
+            </div>
+            <div class="message__content">
+              <h2>John Doe</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="phoned--status">
+              <span class="message__status">20:01</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online5min">
+            <div class="profile__avatar">
+              <img src="avatars/3.png" alt="Anna Smith" />
+            </div>
+            <div class="message__content">
+              <h2>Anna Smith</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="seen--status">
+              <span class="message__status">23:14</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/1.png" alt="Martin Kuerbs" />
+            </div>
+            <div class="message__content">
+              <h2>Martin Kuerbs</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="send--status">
+              <span class="message__status">09:22</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online">
+            <div class="profile__avatar">
+              <img src="avatars/2.png" alt="John Doe" />
+            </div>
+            <div class="message__content">
+              <h2>John Doe</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="seen--status">
+              <span class="message__status">09:57</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/3.png" alt="Anna Smith" />
+            </div>
+            <div class="message__content">
+              <h2>Anna Smith</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="send--status">
+              <span class="message__status">13:33</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online">
+            <div class="profile__avatar">
+              <img src="avatars/1.png" alt="Martin Kuerbs" />
+            </div>
+            <div class="message__content">
+              <h2>Martin Kuerbs</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="phoned--status">
+              <span class="message__status">15:06</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/2.png" alt="John Doe" />
+            </div>
+            <div class="message__content">
+              <h2>John Doe</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="seen--status">
+              <span class="message__status">17:29</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/3.png" alt="Anna Smith" />
+            </div>
+            <div class="message__content">
+              <h2>Anna Smith</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="reached--status">
+              <span class="message__status">14:36</span>
+            </div>
+          </li>
+          <li class="contacts__profile status--online">
+            <div class="profile__avatar">
+              <img src="avatars/1.png" alt="Martin Kuerbs" />
+            </div>
+            <div class="message__content">
+              <h2>Martin Kuerbs</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="seen--status">
+              <span class="message__status">11:55</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--offline">
+            <div class="profile__avatar">
+              <img src="avatars/2.png" alt="John Doe" />
+            </div>
+            <div class="message__content">
+              <h2>John Doe</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="send--status">
+              <span class="message__status">02:35</span>
+            </div>
+          </li>
+
+          <li class="contacts__profile status--online">
+            <div class="profile__avatar">
+              <img src="avatars/3.png" alt="Anna Smith" />
+            </div>
+            <div class="message__content">
+              <h2>Anna Smith</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="reached--status">
+              <span class="message__status">06:30</span>
+            </div>
+          </li>
+        </ul>
+      </main>
+      <footer></footer>
+    </section>
+
+    <!---</div>--->
+  </body>
+</html>

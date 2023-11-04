@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  background-color: #7360f2;
+  font-family: sans-serif;
+
+  /*--font-size: 20px;*/
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h2,
+p {
+  margin: 0;
+}
+/*.phone {
+  background-color: #000000;
+  border-top: 45px solid black;
+  border-bottom: 45px solid black;
+  border-left: 8px solid black;
+  border-right: 8px solid black;
+  box-shadow: -14px 0px 13px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  width: 80%;
+  height: 90%;
+
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}*/
+
+/*---chat app styles--*/
+.app {
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #777;*/
+}
+
+.app header {
+  background-color: #123;
+  height: 8%;
+  /*border-radius: 30px 20px 0 0;*/
+}
+.app footer {
+  background-color: #123;
+  height: 8%;
+  /*border-radius: 0 0 20px 20px;*/
+}
+
+.app main {
+  background-color: white;
+  height: 84%;
+  overflow: auto;
+}
+
+/*--CONTACTS--*/
+.contacts__profile {
+  /*height: 3em;*/
+  height: 9.7vh;
+  padding: 0.5em;
+  width: 100%;
+  border-bottom: 1.5px solid rgba(128, 128, 128, 0.26);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.profile__avatar {
+  position: relative;
+  width: 4.8em;
+  height: 4.8em;
+  /*width: calc(var(--font-size) *2.6);
+  height: calc(var(--font-size) *2.6);*/
+  float: left;
+  margin-right: 0.5em;
+
+  background-color: #456;
+  border-radius: 100%;
+  /*overflow: hidden;*/
+}
+.profile__avatar::before {
+  content: "";
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  border-radius: 100%;
+  top: 0.25em;
+  left: 0.25em;
+  z-index: 1;
+}
+
+.status--online .profile__avatar::before {
+  background-image: url(icons/white-tick.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  background-position-x: center;
+  background-position-y: center;
+  background-color: #0dcaff;
+  border: 0.2em solid white;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 4%;
+  font-size: 0.5em;
+  z-index: 2;
+}
+
+.status--online5min .profile__avatar::before {
+  background-image: url(icons/white-watch.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  background-position-x: center;
+  background-position-y: center;
+  background-color: orange;
+  border: 0.2em solid white;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 4%;
+  font-size: 0.5em;
+  z-index: 2;
+}
+
+.status--offline .profile__avatar::before {
+  background-image: url(icons/snooze.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  background-position-x: center;
+  background-position-y: center;
+  background-color: gray;
+  border: 0.2em solid white;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 4%;
+  font-size: 0.5em;
+  z-index: 2;
+}
+
+.profile__avatar img {
+  width: 100%;
+  position: absolute;
+}
+.message__content {
+  float: left;
+  color: black;
+}
+.message__status {
+  float: right;
+  color: #aaa;
+  font-size: 0.6em;
+  position: relative;
+}
+.message__status::before {
+  content: "";
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  top: -0.1em;
+  left: -1.3em;
+  z-index: 1;
+}
+.seen--status .message__status::before {
+  background-image: url(icons/seen.svg);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: 1.7em;
+}
+.send--status .message__status::before {
+  background-image: url(icons/send.svg);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: 1.7em;
+}
+.reached--status .message__status::before {
+  background-image: url(icons/reached.svg);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: 1.7em;
+}
+.phoned--status .message__status::before {
+  background-image: url(icons/phone.svg);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: 1.8em;
+  background-color: #ebebeb;
+  border-radius: 100%;
+  padding: 0.3em;
+  left: -1.6em;
+}
+.profile__actions {
+  float: right;
+  background-color: red;
+  height: 100%;
+  width: 33.5%;
+  text-align: center;
+  margin-right: -35%;
+  margin-top: -5em;
+  scroll-snap-align: end;
+}
+.profile__actions button {
+  width: 5em;
+  height: 5em;
+}
+.profile__slide {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+@media (orientation: landscape) {
+  .contacts__profile {
+    height: 23vh;
+  }
+  .profile__avatar {
+    margin-left: 1em;
+    height: 5.2em;
+    width: 5.2em;
+  }
+  .message__content {
+    margin-left: 1em;
+  }
+  .message__status {
+    margin-right: 2em;
+  }
+}
+@media (orientation: landscape) and (min-width: 1000px) {
+  body {
+    font-size: 25px;
+    --font-size: 30px;
+  }
+}
+
+/*---BARA SCROLL---*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0078d4;
+}
